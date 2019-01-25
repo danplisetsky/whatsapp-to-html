@@ -1,0 +1,31 @@
+{
+  "name": "whatsapp-to-markdown",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean:output": "rm -rf ./lib ./_temp",
+    "compile:rollup": "rollup --config rollup.config.js",
+    "build": "npm run clean:output && npm run compile:rollup",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "start": "node ./lib/bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-unicode-property-regex": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "@types/node": "^10.12.15",
+    "rollup": "^0.68.1",
+    "rollup-plugin-babel": "^4.1.0",
+    "rollup-plugin-typescript2": "^0.18.1",
+    "ts-node": "^7.0.1",
+    "tsconfig-paths": "^3.7.0",
+    "tslint": "^5.12.1",
+    "tslint-immutable": "^5.1.0",
+    "typescript": "^3.2.2"
+  }
+}

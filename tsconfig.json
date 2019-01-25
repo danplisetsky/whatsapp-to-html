@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowJs": false,
+    "target": "es5",
+    "lib": ["es2018"],
+    "baseUrl": ".",
+    "paths": {
+      "parser/*": ["src/parser/*"]
+    },
+    "alwaysStrict": true,
+    "outDir": "lib"
+  },
+  "files": ["./src/index.ts"]
+}

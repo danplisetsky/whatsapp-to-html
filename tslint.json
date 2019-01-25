@@ -1,0 +1,25 @@
+{
+  "extends": ["tslint-immutable"],
+  "rules": {
+    // Built-in rules
+    "no-var-keyword": true,
+    "no-parameter-reassignment": true,
+    "typedef": [true, "call-signature"],
+    "semicolon": true,
+
+    // From tslint-immutable
+    "readonly-keyword": true,
+    "readonly-array": true,
+    "no-let": true,
+    "no-object-mutation": true,
+    "no-delete": true,
+    "no-this": true,
+    "no-class": true,
+    "no-mixed-interface": true,
+    "no-expression-statement": true,
+    "no-throw": true
+  },
+  "jsRules": {
+    "no-empty": true
+  }
+}
