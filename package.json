@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "clean:output": "rm -rf ./lib ./_temp",
     "compile:rollup": "rollup --config rollup.config.js",
     "build": "npm run clean:output && npm run compile:rollup",
-    "lint": "tslint -c tslint.json 'src/**/*.ts'",
-    "start": "node ./lib/bundle.js"
+    "start": "npm run build && node ./lib/bundle.js"
   },
   "keywords": [],
   "author": "",
