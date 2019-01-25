@@ -4,11 +4,14 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "allowJs": false,
+    "removeComments": true,
+    "noImplicitReturns": true,
     "target": "es5",
     "lib": ["es2018"],
     "baseUrl": ".",
     "paths": {
-      "parser/*": ["src/parser/*"]
+      "parser/*": ["src/parser/*"],
+      "utils/*": ["src/utils/*"]
     },
     "alwaysStrict": true,
     "outDir": "lib"
