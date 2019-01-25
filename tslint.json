@@ -1,5 +1,5 @@
 {
-  "extends": ["tslint-immutable"],
+  "extends": ["tslint-immutable", "tslint-config-prettier"],
   "rules": {
     // Built-in rules
     "no-var-keyword": true,
