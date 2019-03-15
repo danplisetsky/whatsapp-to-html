@@ -7,7 +7,7 @@
     "typedef": [true, "call-signature"],
     "semicolon": true,
     "arrow-return-shorthand": true,
-    "return-undefined": true,
+    // "return-undefined": true,
     "newline-before-return": true,
 
     // From tslint-immutable

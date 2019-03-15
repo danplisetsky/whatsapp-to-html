@@ -5,25 +5,30 @@
   "main": "index.js",
   "scripts": {
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
-    "lint:fix": "npm run lint -- --fix",
+    "lint:fix": "npm run lint --silent -- --fix",
     "clean:output": "rm -rf ./lib ./_temp",
     "compile:rollup": "rollup --config rollup.config.js",
-    "build": "npm run clean:output && npm run compile:rollup",
-    "start": "npm run build && node ./lib/bundle.js"
+    "build": "npm run clean:output --silent && npm run compile:rollup --silent",
+    "start": "npm run build --silent && node ./lib/bundle.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "date-and-time": "^0.6.3"
+  },
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/plugin-proposal-unicode-property-regex": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
+    "@types/date-and-time": "^0.6.0",
     "@types/node": "^10.12.15",
     "prettier-tslint": "^0.4.2",
     "rollup": "^0.68.1",
     "rollup-plugin-babel": "^4.1.0",
-    "rollup-plugin-typescript2": "^0.18.1",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-typescript2": "^0.20.1",
     "ts-node": "^7.0.1",
     "tsconfig-paths": "^3.7.0",
     "tslint": "^5.12.1",

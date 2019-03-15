@@ -1,7 +1,8 @@
 export interface WhatsAppMessage {
   readonly date: string;
   readonly time: string;
-  readonly sender: string; // phone number or name
+  /** @description Phone number or name */
+  readonly sender: string;
   readonly message: string;
 }
 

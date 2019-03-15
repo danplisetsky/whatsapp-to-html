@@ -6,12 +6,15 @@
     "allowJs": false,
     "removeComments": true,
     "noImplicitReturns": true,
+    "allowSyntheticDefaultImports": true,
     "target": "es5",
     "lib": ["es2018"],
     "baseUrl": ".",
     "paths": {
-      "parser/*": ["src/parser/*"],
-      "utils/*": ["src/utils/*"]
+      "*": ["types/*"],
+      "@parser*": ["src/parser*"],
+      "@utils*": ["src/utils*"],
+      "@formatter*": ["src/formatter*"]
     },
     "alwaysStrict": true,
     "outDir": "lib"

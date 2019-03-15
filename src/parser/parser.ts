@@ -1,8 +1,8 @@
 import * as fs from "fs";
 import * as os from "os";
 
-import { WhatsAppMessage, ParsedWhatsAppMessage } from "parser/types";
-import { sanitize } from "utils/string";
+import { WhatsAppMessage, ParsedWhatsAppMessage } from "@parser/types";
+import { sanitize } from "@utils/string";
 
 //#region INTERNALS
 
@@ -20,7 +20,7 @@ function _parseMessage(message: string): ParsedWhatsAppMessage {
         date: res[1],
         time: res[2],
         sender: sanitizeSender(res[3]),
-        message: res[4]
+        message: res[4],
       }
     : null;
 }
