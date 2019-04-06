@@ -20,7 +20,7 @@
     "no-class": true,
     "no-mixed-interface": true,
     "no-expression-statement": true,
-    "no-throw": true
+    "no-throw": false
   },
   "jsRules": {
     "no-empty": true
