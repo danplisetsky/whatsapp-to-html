@@ -21,7 +21,7 @@ export default {
     globals: {
       "date-and-time": "date-and-time",
     },
-    file: "lib/bundle.js",
-    format: "cjs",
+    format: "umd",
+    file: "dist/whatsapp-to-html.js",
   },
 };

@@ -2,4 +2,4 @@
 .rpt2_cache
 
 node_modules/
-lib/
+dist/
