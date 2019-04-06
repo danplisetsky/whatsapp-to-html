@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import * as os from "os";
 
-import { WhatsAppMessage, ParsedWhatsAppMessage } from "@parser/types";
+import { WhatsAppMessage, ParsedWhatsAppMessage, Sender } from "@parser/types";
 import { sanitize } from "@utils/string";
 
 //#region INTERNALS
@@ -29,7 +29,12 @@ function _parseMessage(message: string): ParsedWhatsAppMessage {
 
 //#region EXPORTS
 
-export function parseFile(path: string): ReadonlyArray<WhatsAppMessage> {
+export function parseFile(
+  path: string
+): {
+  readonly messages: ReadonlyArray<WhatsAppMessage>;
+  readonly senders: ReadonlySet<Sender>;
+} {
   const content = fs.readFileSync(path).toString();
   const messages = content.split(os.EOL).reduce((prev, cur) => {
     if (parseRegExp.test(cur)) return [...prev, cur];
@@ -43,8 +48,12 @@ export function parseFile(path: string): ReadonlyArray<WhatsAppMessage> {
   const parsedMessages = messages.map(
     message => _parseMessage(message) as WhatsAppMessage
   );
+  const senders = new Set(parsedMessages.map(pm => pm.sender));
 
-  return parsedMessages.filter(message => !!message);
+  return {
+    messages: parsedMessages.filter(message => !!message),
+    senders,
+  };
 }
 
 //#endregion
