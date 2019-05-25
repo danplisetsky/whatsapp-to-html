@@ -62,7 +62,7 @@ function formatMessages(
 
 //#region EXPORTS
 
-export function formatMarkdown({
+export function formatHtml({
   messages,
   senders,
   datePattern,
