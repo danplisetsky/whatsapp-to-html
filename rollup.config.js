@@ -17,11 +17,20 @@ export default {
     }),
   ],
   external: ["fs", "os"],
-  output: {
-    globals: {
-      "date-and-time": "date-and-time",
+  output: [
+    {
+      globals: {
+        "date-and-time": "date-and-time",
+      },
+      format: "cjs",
+      file: "dist/whatsapp-to-html.js",
     },
-    format: "umd",
-    file: "dist/whatsapp-to-html.js",
-  },
+    {
+      globals: {
+        "date-and-time": "date-and-time",
+      },
+      format: "esm",
+      file: "dist/whatsapp-to-html.es.js",
+    },
+  ],
 };
