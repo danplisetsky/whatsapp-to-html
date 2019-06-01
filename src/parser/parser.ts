@@ -10,7 +10,7 @@ const parseRegExp = /([\d\/]+),\s*([\d:]{4,}(?:\s*[AP]M)?)([^:]+):\s*(.*)/;
 
 function _parseMessage(message: string): ParsedWhatsAppMessage {
   function sanitizeSender(sender: string): string {
-    return sanitize(sender, /[\+\d\p{L}]/u);
+    return sanitize(sender, /[\+\s\d\p{L}]/u);
   }
 
   const res = parseRegExp.exec(message);
