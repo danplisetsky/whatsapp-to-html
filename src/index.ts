@@ -1,5 +1,29 @@
-import { parseFile } from "parser/parser";
+import { parseFile } from "@parser/parser";
+import { formatHtml } from "@formatter/format";
 
-const res = parseFile("/Users/danp/projs/whatsapp/_chat.txt");
-// tslint:disable-next-line:no-expression-statement
-console.log(res);
+/**
+ * @description The way the dates are formatted in the input file
+ * @example
+ * "DD/MM/YYYY",
+ * "MM/D/YY"
+ */
+type DatePattern = string;
+
+/**
+ * @param filePath
+ * @param datePattern The way the dates are formatted in the input file
+ */
+export function whatsappToHtml(
+  filePath: string,
+  datePattern: DatePattern,
+  senderAliases?: { readonly [s: string]: string }
+): string {
+  const { messages, senders } = parseFile(filePath);
+
+  return formatHtml({
+    datePattern: datePattern,
+    messages: messages,
+    senders,
+    senderAliases,
+  });
+}
