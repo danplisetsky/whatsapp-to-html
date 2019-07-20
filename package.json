@@ -1,8 +1,10 @@
 {
   "name": "whatsapp-to-html",
-  "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.0",
+  "description": "Convert exported WhatsApp chats to html",
+  "main": "./dist/whatsapp-to-html.js",
+  "module": "./dist/whatsapp-to-html.es.js",
+  "bin": "./bin/cli",
   "scripts": {
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "lint:fix": "npm run lint --silent -- --fix",
@@ -11,9 +13,17 @@
     "build": "npm run clean:output --silent && npm run compile:rollup --silent && chmod a+x bin/cli",
     "start": "npm run build --silent && node ./dist/whatsapp-to-html.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "whatsapp",
+    "whatsapp-to-html"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danplisetsky/whatsapp-to-html.git"
+  },
+  "bugs": "https://github.com/danplisetsky/whatsapp-to-html/issues",
+  "author": "Daniel Plisetsky",
+  "license": "MIT",
   "dependencies": {
     "date-and-time": "^0.6.3",
     "minimist": "^1.2.0",
