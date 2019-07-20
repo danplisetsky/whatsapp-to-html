@@ -10,3 +10,4 @@ deploy:
     tags: true
     repo: danplisetsky/whatsapp-to-html
     branch: master
+script: npm run build
