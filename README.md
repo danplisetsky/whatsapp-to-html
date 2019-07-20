@@ -1,4 +1,4 @@
-# whatsapp-to-html
+# whatsapp-to-html &middot; [![Build Status](https://travis-ci.org/danplisetsky/whatsapp-to-html.svg?branch=master)](https://travis-ci.org/danplisetsky/whatsapp-to-html)
 
 ## The problem
 
