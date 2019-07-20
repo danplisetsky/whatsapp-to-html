@@ -1,6 +1,6 @@
 {
   "name": "whatsapp-to-html",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert exported WhatsApp chats to html",
   "main": "./dist/whatsapp-to-html.js",
   "module": "./dist/whatsapp-to-html.es.js",
