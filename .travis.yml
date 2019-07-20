@@ -1,0 +1,11 @@
+language: node_js
+node_js: node
+deploy:
+  provider: npm
+  email: danplisetsky@gmail.com
+  api_key:
+    secure: ECRdXz/XsjMRHtTBWpnYLRH9whSP/zCPXv9+H9q9di/ANVnEF3POFsexHUmsYje3V6nq42kHcZgTsmD0rNq/dyM5PB1qOLovjxndgq1t/3AnHy6DOdR3MDXhc4L4VPCqMxwf6DmCiEKZMB8Nakm5tJDXaVTDyMiGU1KlvbGjjO0ApzDMxNz9qtNXCvyAvkVkRLPe+hs2Wfd/WU+mxEYv46R5OAeiorlRIS8RqzzUtxD3qndwCkmIgH3+ZG9eEiKcXE36B2beltEE6XYWGqR7vxXCN7N033BoHsEgexpld23Zai7xy1ePGdu4W0nCfRbSkZ34AMWLSw76lcbZa8b7PXjq76ni1V6aI0PdlrNfzfxnbdOQ4YaMSwufbrz2J315h/3bwmLAaXTULF/X4Vv+wy/pyju1i6sN7gcnkA6EHUgCbA95jQyFK4Liq26uX+I3U4RQfWxFcaP7P+5OBpUwmP1ObicGvqCpIS5vjI+ETu45kCt+blSz5ITkdaJ+3P8ckayvFvm8/icMEqRLsiK8JprhHOYsz/czFl7K7PWhB5S9i/kXdwa0fIcOhKU5K+TsxeB4wR60TPlqc3uWQ+vXMfeLz8W9Tilm34BRZ5ZEBeoa8w65Zs9xvcG0zqbp4Iyjpeagg6H8D9VAc0WSpK+3mzT2zC5jst7ORDyjEs+OcAg=
+  on:
+    tags: true
+    repo: danplisetsky/whatsapp-to-html
+    branch: master
