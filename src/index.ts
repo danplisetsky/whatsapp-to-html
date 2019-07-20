@@ -29,7 +29,7 @@ export function whatsappToHtml(
     });
   } catch (error) {
     // tslint:disable-next-line:no-expression-statement
-    console.log("Something went wrong: ", error.message);
+    console.error("Something went wrong: ", error.message);
 
     return "";
   }
