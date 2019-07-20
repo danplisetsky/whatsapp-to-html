@@ -1,4 +1,4 @@
-# whatsapp-to-html &middot; [![Build Status](https://travis-ci.org/danplisetsky/whatsapp-to-html.svg?branch=master)](https://travis-ci.org/danplisetsky/whatsapp-to-html)
+# whatsapp-to-html &middot; [![Build Status](https://travis-ci.org/danplisetsky/whatsapp-to-html.svg?branch=master)](https://travis-ci.org/danplisetsky/whatsapp-to-html) [![npm](https://img.shields.io/npm/v/whatsapp-to-html.svg)](https://www.npmjs.com/package/whatsapp-to-html)
 
 ## The problem
 
