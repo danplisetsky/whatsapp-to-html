@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "date-and-time": "^0.6.3",
+    "minimist": "^1.2.0",
     "randomcolor": "^0.5.4"
   },
   "devDependencies": {
@@ -23,6 +24,7 @@
     "@babel/plugin-proposal-unicode-property-regex": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
     "@types/date-and-time": "^0.6.0",
+    "@types/minimist": "^1.2.0",
     "@types/node": "^10.12.15",
     "@types/randomcolor": "^0.5.2",
     "prettier-tslint": "^0.4.2",
