@@ -60,4 +60,17 @@ export default [
       },
     ],
   },
+  {
+    input: "src/cli.ts",
+    plugins: commonPlugins,
+    external: ["fs", "os"],
+    output: {
+      banner: "#!/usr/bin/env node",
+      globals: {
+        "date-and-time": "date-and-time",
+      },
+      format: "cjs",
+      file: "bin/cli",
+    },
+  },
 ];
