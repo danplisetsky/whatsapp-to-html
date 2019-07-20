@@ -18,12 +18,19 @@ export function whatsappToHtml(
   datePattern: DatePattern,
   senderAliases?: { readonly [s: string]: string }
 ): string {
-  const { messages, senders } = parseFile(filePath);
+  try {
+    const { messages, senders } = parseFile(filePath);
 
-  return formatHtml({
-    datePattern: datePattern,
-    messages: messages,
-    senders,
-    senderAliases,
-  });
+    return formatHtml({
+      datePattern: datePattern,
+      messages: messages,
+      senders,
+      senderAliases,
+    });
+  } catch (error) {
+    // tslint:disable-next-line:no-expression-statement
+    console.log("Something went wrong: ", error.message);
+
+    return "";
+  }
 }
